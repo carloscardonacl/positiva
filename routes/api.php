@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(['jwt'])->group(function () {
-    Route::get('/test', [PositivaDataController::class, 'store'] );
+    Route::post('/aurorizaciones/dispensacion', [PositivaDataController::class, 'store'] );
 });
 
 Route::post('/auth', [AuthController::class, 'login']);

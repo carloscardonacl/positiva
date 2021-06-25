@@ -14,21 +14,33 @@ class AuthController extends Controller
 
     public function login()
     {
+        $documento = request('user');
+        $password = md5(request('password'));
 
-        $Documento = request('Documento');
-        $password = md5(request('Password'));
-
-        $credenciales =  AutorizadoWebService::where('Documento', $Documento)
+        $credenciales =  AutorizadoWebService::where('Documento', $documento)
             ->where('Password', "$password")
             ->where('Estado', 'Activo')
             ->first();
 
         if ($credenciales) {
             $data = Auth::encode($credenciales);
-            return response()->json(['Data' => $data, 'Cod' => 'ok', 'Message' => 'Autenticación extosa'], 200);
+            $res = [
+                "message" => "succces",
+                "data" => [
+                    "token" => $data
+                ],
+                "fechaActual" => ""
+            ];
+
+            return response()->json($res, 200);
         } else {
-            $res = ['Cod' => 'error', 'Message' => 'Error de autenticación'];
-            return response()->json($res, 400);
+            $res = [
+                "success" => false,
+                "httpResponseCode" => 401,
+                "error" => "No se encontró el usuario con las credenciales ingresadas",
+                "fechaActual" => ""
+            ];
+            return response()->json($res, 401);
         }
     }
 }

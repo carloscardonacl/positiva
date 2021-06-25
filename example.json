@@ -1,0 +1,75 @@
+{
+    "numeroAutorizacion": "123456789",
+    "fechaHoraAutorizacion": "2021-06-24 20:54:23",
+    "fechaVencimiento": "2021-06-24",
+    "tieneTutela": "1",
+    "serviciosAutorizados": [
+        {
+            "codigo": "s001",
+            "codigoLegal": "s002",
+            "descripcion": "s003",
+            "cantidad": "s004",
+            "motivoAutorizacion": "123456789"
+        }
+    ],
+    "diagnosticos": [
+        {
+            "codigo":"d1",
+            "descripcion":"d1 descrip",
+            "principal":"1123123"
+
+        }
+    ],
+    "proveedor": {
+        "tipoDocumento": "CC",
+        "numeroDocumento": "12345",
+        "codigoHabilitacion": "ch0111",
+        "razonSocial": "test",
+        "departamento": "santander",
+        "codigoDepartamento": "c011",
+        "municipio": "mun011",
+        "codigoMunicipio": "mun0112",
+        "sede": "p01",
+        "direccion": "p02",
+        "indicativoTelefono": "p03",
+        "numeroTelefono": "p04"
+    },
+    "afiliado": {
+        "tipoDocumento": "TI",
+        "numeroDocumento": "123456",
+        "primerNombre": "suj",
+        "segundoNombre": "ere",
+        "primerApellido": "werwer",
+        "segundoApellido": "ttrrr",
+        "fechaNacimiento": "1999-01-01",
+        "departamento": "despar",
+        "codigoDepartamento": "depar",
+        "municipio": "mun",
+        "codigoMunicipio": "codmun",
+        "zona": "1",
+        "localidad": "local",
+        "direccionResidencial": "00001",
+        "corroElectronico": "sujet@su.com",
+        "telefonoFijoParticularIndicativo": "1",
+        "telefonoFijoParticularNumero": "1234",
+        "telefonoCelularParticularNumero": "123456",
+        "codigoCoberturaSalud": "1233",
+        "ramo": "2"
+    },
+    "relacionLaboral": {
+        "tipoDocumento": "CC",
+        "numeroDocumento": "987655",
+        "razonSocial": "123",
+        "fechaVinculacion": "2021-01-01",
+        "estadoRelacionLaboral": "1",
+        "marcaEmpleador": "1"
+    },
+    "numeroSolicitudSiniestro": "001",
+    "numeroSiniestro": "002",
+    "personaAutorizante": {
+        "nombre": "car",
+        "cargoActividad": "car",
+        "telefonoContactoUno": "1",
+        "telefonoContactoDos": "12"
+    }
+}

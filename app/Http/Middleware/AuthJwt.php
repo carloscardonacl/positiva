@@ -16,11 +16,17 @@ class AuthJwt
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check($request->get('Token'))) {
+        if (Auth::check($request->get('token'))) {
             return $next($request);
         }
+        $res = [
+            "success"=> false,
+            "httpResponseCode"=> 401,
+            "error"=> "No se encontró el usuario con las credenciales ingresadas",
+            "fechaActual"=> ""
+        ];
 
-        $res = ['Cod'=>'error','Message'=>'Error de autenticación'];
+
         return response()->json($res,400);
 
     }
